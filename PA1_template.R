@@ -57,13 +57,13 @@ diffTotal = sum(impStepsByInterval$steps) - sum(totalSteps$steps)
 
 # Create a new factor variable in the dataset with two levels - "weekend" and "weekday"
 
-DayType <- function(date) {
+
   day <- weekdays(date)
   if (day %in% c('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'))
     return ("weekeday")
   else if (day %in% c('Saturday', 'Sunday'))
     return ("weekend")
-}
+
 imp_activityData$date <- as.Date(imp_activityData$date)
 imp_activityData$day <- sapply(imp_activityData$date, FUN = DayType)
 
