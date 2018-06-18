@@ -14,8 +14,10 @@ hist(totalSteps$steps, main= "Total Steps per Day",xlab = "Number of Steps")
 ```{r}
 meanSteps <- mean(totalSteps$steps, na.rm = TRUE)
 meanSteps
+## [1] 10766.19
 medSteps <- median(totalSteps$steps, na.rm = TRUE)
 medSteps
+## [1] 10765
 ```
 # Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the 
 # average number of steps taken, averaged across all days (y-axis)
