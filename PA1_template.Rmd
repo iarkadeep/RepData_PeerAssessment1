@@ -1,3 +1,6 @@
+html_document
+keep_md:true
+
 # Store the data after unzipping
 ```{r}
 activityData <- read.csv(file="activity.csv",header=TRUE)
@@ -13,10 +16,10 @@ hist(totalSteps$steps, main= "Total Steps per Day",xlab = "Number of Steps")
 # Calculate and report the mean
 ```{r}
 meanSteps <- mean(totalSteps$steps, na.rm = TRUE)
-meanSteps
+print(meanSteps)
 ## [1] 10766.19
 medSteps <- median(totalSteps$steps, na.rm = TRUE)
-medSteps
+print(medSteps)
 ## [1] 10765
 ```
 # Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the 
