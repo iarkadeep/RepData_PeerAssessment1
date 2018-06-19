@@ -121,10 +121,8 @@ $(document).ready(function () {
 </div>
 
 
-<div id="store-the-data-after-unzipping" class="section level1">
-<h1>Store the data after unzipping</h1>
+<p>html_document keep_md:true output: md_document: variant: markdown_github # Store the data after unzipping</p>
 <pre class="r"><code>activityData &lt;- read.csv(file=&quot;activity.csv&quot;,header=TRUE)</code></pre>
-</div>
 <div id="calculate-the-total-steps-taken-per-day" class="section level1">
 <h1>Calculate the total steps taken per day</h1>
 <pre class="r"><code>totalSteps &lt;- aggregate(steps ~ date, activityData, FUN=sum)</code></pre>
